@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>LJ Pickz — Premium Sports Analysis · 7-Day Free Trial</title>
-<meta name="description" content="Premium data-driven sports analysis from full-time analysts. 1,000+ members, 4.7-star rated. Start your 7-day free trial.">
+<meta name="description" content="Premium data-driven sports analysis from full-time analysts. 2,000+ members, 4.7-star rated. Start your 7-day free trial.">
 <link rel="icon" href="assets/logo.png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +32,7 @@
     </div>
     <div style="display: flex; align-items: center; gap: 6px; border: 1px solid rgba(212,175,55,0.35); border-radius: 999px; padding: 6px 12px; font-size: 12px; color: #D4AF37; letter-spacing: 0.5px;">
       <span style="width: 7px; height: 7px; border-radius: 50%; background: #58C776; display: inline-block;"></span>
-      1,000+ members
+      2,000+ members
     </div>
   </header>
 
@@ -41,6 +41,18 @@
     <img src="assets/logo.png" alt="LJ" style="width: 108px; height: 108px; object-fit: contain; filter: drop-shadow(0 6px 30px rgba(212,175,55,0.35));">
     <h1 style="font-family: Archivo, 'Helvetica Neue', sans-serif; font-weight: 900; font-size: 31px; line-height: 1.15; margin: 22px 0 0; letter-spacing: -0.3px; color: #F4EFE3; text-wrap: balance;">PREMIUM DATA-DRIVEN SPORTS ANALYSIS</h1>
     <p style="margin: 14px auto 0; max-width: 320px; font-size: 15.5px; line-height: 1.55; color: #A89F8C;">Expert sports &amp; racing analysis from full-time analysts — delivered daily inside our private Discord.</p>
+
+    <div id="vsl-frame" style="position: relative; margin: 24px 0 0; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; border: 1.5px solid rgba(212,175,55,0.45); background: radial-gradient(120% 120% at 50% 0%, #171208 0%, #0B0906 60%); box-shadow: 0 14px 44px rgba(0,0,0,0.55);">
+      <video id="vsl-video" playsinline preload="metadata" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <source src="assets/vsl.mp4" type="video/mp4">
+      </video>
+      <div id="vsl-overlay" onclick="playVsl()" style="position: absolute; inset: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: radial-gradient(120% 120% at 50% 0%, rgba(23,18,8,0.55) 0%, rgba(11,9,6,0.72) 60%);">
+        <div style="width: 62px; height: 62px; border-radius: 50%; background: linear-gradient(135deg, #F5D678 0%, #D4AF37 45%, #B8860B 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 28px rgba(212,175,55,0.4);">
+          <div style="width: 0; height: 0; border-left: 17px solid #14100A; border-top: 10px solid transparent; border-bottom: 10px solid transparent; margin-left: 5px;"></div>
+        </div>
+        <div style="font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; color: #D4AF37;">WATCH: INSIDE LJ PICKZ</div>
+      </div>
+    </div>
 
     <button onclick="openTrialModal()" style="display: block; width: 100%; margin: 26px 0 0; padding: 17px 24px; border: none; border-radius: 14px; background: linear-gradient(135deg, #F5D678 0%, #D4AF37 45%, #B8860B 100%); color: #14100A; font-weight: 700; font-size: 17px; letter-spacing: 0.5px; font-family: inherit; cursor: pointer; box-shadow: 0 8px 32px rgba(212,175,55,0.35);">Start Your 7-Day Free Trial</button>
     <div style="margin-top: 10px; font-size: 12.5px; color: #7C7362;">Cancel anytime · No commitment</div>
@@ -52,7 +64,7 @@
         <div style="font-size: 11px; color: #8A8170; margin-top: 3px;">Member rating</div>
       </div>
       <div style="background: #0E0C08; padding: 14px 8px;">
-        <div style="font-family: Archivo, 'Helvetica Neue', sans-serif; font-weight: 700; font-size: 19px; color: #D4AF37;">1,000+</div>
+        <div style="font-family: Archivo, 'Helvetica Neue', sans-serif; font-weight: 700; font-size: 19px; color: #D4AF37;">2,000+</div>
         <div style="font-size: 11px; color: #8A8170; margin-top: 3px;">Active members</div>
       </div>
       <div style="background: #0E0C08; padding: 14px 8px;">
@@ -61,9 +73,6 @@
       </div>
     </div>
 
-    <a href="https://docs.google.com/spreadsheets/d/1crpxCU2XxiidMIhuX0lG7yrmZ410Qa5n-9AvSiuasmo/edit?gid=548534739#gid=548534739" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; padding: 13px; border: 1px solid rgba(237,232,221,0.14); border-radius: 12px; color: #C9C0AD; font-size: 13.5px; text-decoration: none; background: rgba(255,255,255,0.02);">
-      <span style="color: #D4AF37;">📊</span> View our full transparent results sheet →
-    </a>
   </section>
 
   <!-- Member wins -->
@@ -77,6 +86,66 @@
     </div>
     <p style="padding: 0 24px; margin: 8px 0 0; font-size: 13px; color: #8A8170;">Member wins &amp; verified reviews from the community</p>
     <div id="wins-rail" style="display: flex; gap: 12px; overflow-x: auto; padding: 16px 24px 6px; scroll-snap-type: x mandatory; scroll-behavior: smooth; align-items: flex-start;">
+      <div style="flex: 0 0 100%; scroll-snap-align: start; background: #100E0A; border: 1px solid rgba(212,175,55,0.16); border-radius: 16px; padding: 14px; display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: center; gap: 9px;">
+          <div style="width: 34px; height: 34px; border-radius: 50%; background: rgba(212,175,55,0.12); border: 1px solid rgba(212,175,55,0.35); color: #D4AF37; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center;">PE</div>
+          <div>
+            <div style="font-weight: 700; font-size: 13px; color: #EDE8DD;">Peter</div>
+            <div style="font-size: 10.5px; color: #6E6656;">04/07/2026 · Discord</div>
+          </div>
+          <span style="margin-left: auto; font-size: 11px; font-weight: 800; color: #58C776; border: 1px solid rgba(88,199,118,0.35); border-radius: 999px; padding: 3px 9px;">+$198.00</span>
+        </div>
+        <img src="assets/win-peter.png" alt="Peter's winning same game multi slip" style="display: block; width: 100%; height: auto; margin-top: 12px; border-radius: 10px;">
+      </div>
+      <div style="flex: 0 0 100%; scroll-snap-align: start; background: #100E0A; border: 1px solid rgba(212,175,55,0.16); border-radius: 16px; padding: 14px; display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: center; gap: 9px;">
+          <div style="width: 34px; height: 34px; border-radius: 50%; background: rgba(212,175,55,0.12); border: 1px solid rgba(212,175,55,0.35); color: #D4AF37; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center;">CH</div>
+          <div>
+            <div style="font-weight: 700; font-size: 13px; color: #EDE8DD;">chinō</div>
+            <div style="font-size: 10.5px; color: #6E6656;">04/07/2026 · Discord</div>
+          </div>
+          <span style="margin-left: auto; font-size: 11px; font-weight: 800; color: #58C776; border: 1px solid rgba(88,199,118,0.35); border-radius: 999px; padding: 3px 9px;">$720 returned</span>
+        </div>
+        <img src="assets/win-chino.png" alt="chinō's $400 same game multi returning $720" style="display: block; width: 100%; height: auto; margin-top: 12px; border-radius: 10px;">
+      </div>
+      <div style="flex: 0 0 100%; scroll-snap-align: start; background: #100E0A; border: 1px solid rgba(212,175,55,0.16); border-radius: 16px; padding: 14px; display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: center; gap: 9px;">
+          <div style="width: 34px; height: 34px; border-radius: 50%; background: rgba(212,175,55,0.12); border: 1px solid rgba(212,175,55,0.35); color: #D4AF37; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center;">💬</div>
+          <div>
+            <div style="font-weight: 700; font-size: 13px; color: #EDE8DD;">Straight from the Discord</div>
+            <div style="font-size: 10.5px; color: #6E6656;">Unedited member messages</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 12px;">
+          <img src="assets/discord-beast.png" alt="Member message: up 13 units today" style="display: block; width: 100%; height: auto; border-radius: 8px;">
+          <img src="assets/discord-connor.png" alt="Member message: LJ the GOAT" style="display: block; width: 100%; height: auto; border-radius: 8px;">
+          <img src="assets/discord-ali.png" alt="Member message: LJ ur a GOAT" style="display: block; width: 100%; height: auto; border-radius: 8px;">
+          <img src="assets/discord-riley.png" alt="Member message: LJ u the goat" style="display: block; width: 100%; height: auto; border-radius: 8px;">
+          <img src="assets/discord-lakers.png" alt="Member message: LJ your the goat bro" style="display: block; width: 100%; height: auto; border-radius: 8px;">
+        </div>
+      </div>
+      <div style="flex: 0 0 100%; scroll-snap-align: start; background: #100E0A; border: 1px solid rgba(212,175,55,0.16); border-radius: 16px; padding: 14px; display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: center; gap: 9px;">
+          <div style="width: 34px; height: 34px; border-radius: 50%; background: rgba(212,175,55,0.12); border: 1px solid rgba(212,175,55,0.35); color: #D4AF37; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center;">MW</div>
+          <div>
+            <div style="font-weight: 700; font-size: 13px; color: #EDE8DD;">Member win</div>
+            <div style="font-size: 10.5px; color: #6E6656;">Resulted bets · shared in Discord</div>
+          </div>
+          <span style="margin-left: auto; font-size: 11px; font-weight: 800; color: #58C776; border: 1px solid rgba(88,199,118,0.35); border-radius: 999px; padding: 3px 9px;">+$791.16</span>
+        </div>
+        <img src="assets/win-resulted-2.png" alt="Member's resulted bets showing a $791.16 win" style="display: block; width: 100%; height: 400px; object-fit: cover; object-position: 50% 28%; margin-top: 12px; border-radius: 10px;">
+      </div>
+      <div style="flex: 0 0 100%; scroll-snap-align: start; background: #100E0A; border: 1px solid rgba(212,175,55,0.16); border-radius: 16px; padding: 14px; display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: center; gap: 9px;">
+          <div style="width: 34px; height: 34px; border-radius: 50%; background: rgba(212,175,55,0.12); border: 1px solid rgba(212,175,55,0.35); color: #D4AF37; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center;">MW</div>
+          <div>
+            <div style="font-weight: 700; font-size: 13px; color: #EDE8DD;">Member win</div>
+            <div style="font-size: 10.5px; color: #6E6656;">Resulted bets · shared in Discord</div>
+          </div>
+          <span style="margin-left: auto; font-size: 11px; font-weight: 800; color: #58C776; border: 1px solid rgba(88,199,118,0.35); border-radius: 999px; padding: 3px 9px;">+$363.40</span>
+        </div>
+        <img src="assets/win-resulted-1.png" alt="Member's resulted bets showing multiple wins" style="display: block; width: 100%; height: 400px; object-fit: cover; object-position: 50% 15%; margin-top: 12px; border-radius: 10px;">
+      </div>
       <div style="flex: 0 0 100%; scroll-snap-align: start; background: #100E0A; border: 1px solid rgba(212,175,55,0.16); border-radius: 16px; padding: 14px; display: flex; flex-direction: column;">
         <div style="display: flex; align-items: center; gap: 9px;">
           <div style="width: 34px; height: 34px; border-radius: 50%; background: rgba(212,175,55,0.12); border: 1px solid rgba(212,175,55,0.35); color: #D4AF37; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center;">TE</div>
@@ -331,7 +400,7 @@
     <div style="position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 480px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: rgba(6,5,4,0.92); backdrop-filter: blur(12px); border-top: 1px solid rgba(212,175,55,0.25); display: flex; align-items: center; gap: 12px; z-index: 50;">
       <div style="flex: 1; min-width: 0;">
         <div style="font-weight: 700; font-size: 13.5px; color: #F4EFE3;">7-Day Free Trial</div>
-        <div style="font-size: 11px; color: #8A8170;">1,000+ members · 4.7★</div>
+        <div style="font-size: 11px; color: #8A8170;">2,000+ members · 4.7★</div>
       </div>
       <button onclick="openTrialModal()" style="flex-shrink: 0; padding: 13px 22px; border: none; border-radius: 11px; background: linear-gradient(135deg, #F5D678 0%, #D4AF37 45%, #B8860B 100%); color: #14100A; font-weight: 800; font-size: 14.5px; font-family: inherit; cursor: pointer;">Start Free</button>
     </div>
@@ -367,6 +436,16 @@
 </div>
 
 <script>
+function playVsl() {
+  var v = document.getElementById('vsl-video');
+  var overlay = document.getElementById('vsl-overlay');
+  if (!v) return;
+  v.setAttribute('controls', '');
+  overlay.style.display = 'none';
+  var p = v.play();
+  if (p && p.catch) p.catch(function () {});
+}
+
 (function () {
   var rail = document.getElementById('wins-rail');
   var pauseUntil = 0;
