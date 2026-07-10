@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>You're in — LJ Pickz</title>
+<meta name="description" content="Your 7-day free trial is confirmed.">
+<link rel="icon" href="assets/logo.png">
+
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2090741911842026');
+  fbq('track', 'PageView');
+
+  // Fire the trial-start conversion, valued by plan (?plan=monthly|weekly)
+  (function () {
+    var plan = (new URLSearchParams(window.location.search).get('plan') || 'monthly').toLowerCase();
+    var weekly = plan === 'weekly';
+    var value = weekly ? 34.99 : 119.99;
+    fbq('track', 'StartTrial', {
+      value: value,
+      currency: 'AUD',
+      predicted_ltv: value,
+      content_name: (weekly ? 'Weekly' : 'Monthly') + ' 7-day free trial'
+    });
+  })();
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2090741911842026&ev=StartTrial&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #060504; }
+  * { box-sizing: border-box; }
+  body { font-family: 'Helvetica Neue', system-ui, sans-serif; color: #F4EFE3; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+  @keyframes pop { 0% { transform: scale(0.6); opacity: 0; } 60% { transform: scale(1.08); } 100% { transform: scale(1); opacity: 1; } }
+</style>
+</head>
+<body>
+  <div style="width: 100%; max-width: 400px; text-align: center; background: linear-gradient(180deg, #17130C 0%, #0E0C08 100%); border: 1px solid rgba(212,175,55,0.4); border-radius: 22px; padding: 34px 26px; box-shadow: 0 24px 80px rgba(0,0,0,0.6);">
+    <div style="width: 74px; height: 74px; margin: 0 auto; border-radius: 50%; background: linear-gradient(135deg, #F5D678 0%, #D4AF37 45%, #B8860B 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 28px rgba(212,175,55,0.4); animation: pop 0.5s ease-out;">
+      <div style="width: 26px; height: 14px; border-left: 4px solid #14100A; border-bottom: 4px solid #14100A; transform: rotate(-45deg) translate(1px, -3px);"></div>
+    </div>
+    <img src="assets/logo.png" alt="LJ" style="width: 46px; height: 46px; object-fit: contain; margin-top: 20px;">
+    <h1 style="font-family: Archivo, 'Helvetica Neue', sans-serif; font-weight: 900; font-size: 27px; margin: 14px 0 0; letter-spacing: -0.3px;">You're in! 🎉</h1>
+    <p style="margin: 12px auto 0; max-width: 300px; font-size: 14.5px; line-height: 1.55; color: #A89F8C;">Your 7-day free trial is confirmed. Check your email for your private Discord access — you'll be inside with the analysts in moments.</p>
+    <div style="margin-top: 20px; background: rgba(212,175,55,0.07); border: 1px solid rgba(212,175,55,0.3); border-radius: 14px; padding: 13px 16px; font-size: 12.5px; color: #C9C0AD;">
+      $0 charged today · Cancel anytime before your trial ends
+    </div>
+    <!-- Replace href with your Discord invite link -->
+    <a href="https://ljpickz.com" style="display: block; margin-top: 22px; padding: 16px 24px; border-radius: 14px; background: linear-gradient(135deg, #F5D678 0%, #D4AF37 45%, #B8860B 100%); color: #14100A; font-weight: 800; font-size: 16px; text-decoration: none; box-shadow: 0 8px 32px rgba(212,175,55,0.35);">Open the Discord →</a>
+    <a href="/" style="display: inline-block; margin-top: 14px; font-size: 12.5px; color: #7C7362; text-decoration: underline;">Back to homepage</a>
+  </div>
+</body>
+</html>
