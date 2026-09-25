@@ -6,24 +6,6 @@
 <meta name="description" content="Premium data-driven sports analysis from full-time analysts. 2,000+ members, 4.7-star rated. Start your 7-day free trial.">
 <link rel="icon" href="assets/logo.png">
 
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2090741911842026');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2090741911842026&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -389,17 +371,6 @@ function playVsl() {
     pauseUntil = Date.now() + 8000;
     rail.scrollBy({ left: dir * step(), behavior: 'smooth' });
   };
-  // Fire Meta Pixel InitiateCheckout when a trial (Stripe) link is clicked
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest('a[href*="buy.stripe.com"]');
-    if (!a) return;
-    var monthly = a.href.indexOf('cNi4gB0nwdm9dzQ9xs9R60e') !== -1;
-    if (window.fbq) fbq('track', 'InitiateCheckout', {
-      value: monthly ? 119.99 : 34.99,
-      currency: 'AUD',
-      content_name: (monthly ? 'Monthly' : 'Weekly') + ' 7-day free trial'
-    });
-  });
   window.openTrialModal = function () { document.getElementById('trial-modal').style.display = 'flex'; };
   window.closeTrialModal = function () { document.getElementById('trial-modal').style.display = 'none'; };
 })();
